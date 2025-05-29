@@ -69,9 +69,7 @@ Example configuration to add to VS Code Continue:
             "-i",
             "--rm",
             "-e", "API_BASE_URL",
-            "-e", "API_KEY",
-            "-e", "MCP_TRANSPORT",
-            "localhost/mcp-server-template:latest"
+            "localhost/service-now-mcp:latest"
           ],
           "env": {
             "API_BASE_URL": "https://redhat.service-now.com"

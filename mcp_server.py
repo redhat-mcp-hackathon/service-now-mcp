@@ -10,7 +10,7 @@ import sensetive_data
 
 mcp = FastMCP("mcp-server")
 
-API_BASE_URL = os.environ["API_BASE_URL"]
+API_BASE_URL = os.environ.get("API_BASE_URL", "http://localhost:8000")
 
 
 async def make_request(
@@ -45,7 +45,8 @@ async def open_locker_ticket() -> str:
     payload["sysparm_item_guid"] = uuid.uuid4().hex
     looker_url = f"{API_BASE_URL}/{sensetive_data.open_locker_url}"
     sensetive_data.headers["Origin"] = API_BASE_URL
-    sensetive_data.headers["Referer"] = f"{API_BASE_URL}/{sensetive_data.headers["Referer"]}"
+    referer = sensetive_data.headers["Referer"]
+    sensetive_data.headers["Referer"] = f"{API_BASE_URL}/{referer}"
     response = requests.post(
         looker_url, 
         json=payload, 
