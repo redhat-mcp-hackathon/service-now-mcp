@@ -1,3 +1,5 @@
+<img width="661" alt="image" src="https://github.com/user-attachments/assets/838bbfc8-fbd0-4c45-b4a9-e86a74778338" />
+
 # Service Now MCP Server
 
 A Model Context Protocol (MCP) server that provides access to Red Hat Help center ticketing system. This server enables AI assistants automate and generate tickets to enable faster and streamline on-board of new employees.
