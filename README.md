@@ -134,9 +134,9 @@ Example configuration to add to VS Code Continue:
 
 - [x] Prove initial POC capabel of openning a simple ticket via serivce now API.
 - [x] Update readme file to include installation details etc.
+- [x] Create a mock service now server for faster feedback loop & reduced risk
 - [ ] Add instructions or script for obtaining user authentication
 - [ ] Create & use variables for: base url, header, cookies 
-- [ ] Create a mock service now server for faster feedback loop & reduced risk
 - [ ] Improve open locker ticket tool (looker size, floor, etc)
 - [ ] Add additional tools: new badge request, payroll request, list open tickets, etc
 
