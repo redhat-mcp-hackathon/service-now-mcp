@@ -43,8 +43,11 @@ async def open_locker_ticket() -> str:
 
     payload["variables"]["requested_for"] = uuid.uuid4().hex
     payload["sysparm_item_guid"] = uuid.uuid4().hex
+    looker_url = f"{API_BASE_URL}/{sensetive_data.open_locker_url}"
+    sensetive_data.headers["Origin"] = API_BASE_URL
+    sensetive_data.headers["Referer"] = f"{API_BASE_URL}/{sensetive_data.headers["Referer"]}"
     response = requests.post(
-        sensetive_data.url, 
+        looker_url, 
         json=payload, 
         headers=sensetive_data.headers, 
         cookies=sensetive_data.cookies,
@@ -53,7 +56,7 @@ async def open_locker_ticket() -> str:
     nested_data = response.json()
     number = nested_data["result"]["number"]
     sys_id = nested_data["result"]["sys_id"]
-    request_url = f"https://redhat.service-now.com/help?id=rh_ticket&table=x_redha_gws_table&sys_id={sys_id}"
+    request_url = f"{API_BASE_URL}/help?id=rh_ticket&table=x_redha_gws_table&sys_id={sys_id}"
     msg = f"""
     New ticket has been created
     Ticket Number: {number}

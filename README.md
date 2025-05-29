@@ -74,8 +74,7 @@ Example configuration to add to VS Code Continue:
             "localhost/mcp-server-template:latest"
           ],
           "env": {
-            "API_BASE_URL": "https://api.example.com",
-            "API_KEY": "REDACTED"
+            "API_BASE_URL": "https://redhat.service-now.com"
           }  
         }
       }
