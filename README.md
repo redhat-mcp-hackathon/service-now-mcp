@@ -142,7 +142,7 @@ Example configuration to add to VS Code Continue:
 
 ## Environment Variables
 
-TODO needs to be implemented
+- `API_BASE_URL` - The service now base url (default: "localhost:8000")
 
 ## Data Privacy
 
